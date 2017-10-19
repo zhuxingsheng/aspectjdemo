@@ -1,0 +1,9 @@
+<aspectj>
+    <aspects>
+        <concrete-aspect name="com.jackeye.aspectj.PerformanceAdvice"
+                         extends="com.jackeye.aspectj.AbstractPerformanceAdvice">
+            <pointcut name="externalPointcut" expression="execution(public * com.jackeye.service.AspectjService.*(String))"/>
+        </concrete-aspect>
+    </aspects>
+    <weaver options="-verbose -showWeaveInfo"/>
+</aspectj>

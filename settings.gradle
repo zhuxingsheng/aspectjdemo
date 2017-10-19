@@ -1,0 +1,5 @@
+rootProject.name = 'aspectjdemo'
+include 'aspectj-demo'
+include 'aspectj-ajc-demo'
+include 'aspectj-annotation-demo'
+

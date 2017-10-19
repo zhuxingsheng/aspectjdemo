@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<aspectj>
+    <weaver options="-debug -verbose -showWeaveInfo">
+        <include within="com.vip..*" />
+    </weaver>
+</aspectj>

@@ -1,0 +1,18 @@
+
+# Eclipse artifacts, including WTP generated manifests
+.classpath
+.project
+.metadata
+venus-*/src/main/java/META-INF/MANIFEST.MF
+
+# IDEA artifacts and output dirs
+*.iml
+*.ipr
+*.iws
+.idea
+
+.gradle
+
+.vinfo
+
+/out

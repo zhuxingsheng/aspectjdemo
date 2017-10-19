@@ -1,0 +1,39 @@
+group 'com.jackeye'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+subprojects {
+
+    apply plugin: 'java'
+    apply plugin: "idea"
+
+    ext {
+        junitVersion = "4.11"
+        springVersion = "4.3.3.RELEASE"
+        jacksonVersion = "2.4.4"
+        compileJava.options.encoding = 'UTF-8'
+        compileTestJava.options.encoding = 'UTF-8'
+    }
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    tasks.withType(JavaCompile) {
+        options.encoding = 'UTF-8'
+    }
+
+    //配置依赖
+    dependencies {
+        compile group: 'org.aspectj', name: 'aspectjweaver', version: '1.8.11'
+        compile group: 'org.aspectj', name: 'aspectjrt', version: '1.8.11'
+        testCompile group: 'junit', name: 'junit', version: '4.12'
+    }
+}
